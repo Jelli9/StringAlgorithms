@@ -6,12 +6,13 @@ public class StringAlgorithms {
      * a String where each character is placed on its own line.
      */
     public static String printCharacters(String word) {
+       String string = "";
         // TODO: Implement this method
        for (int a = 0; a < word.length(); a++) {
-         String character = word.substring(a , a + 1);
-         System.out.println(character);
+        string += word.substring(a , a + 1) + "\n";
+         
        }
-        return "";
+        return string;
     }
 
 
@@ -22,12 +23,13 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
+        String newWord = "";
         for (int b = 0; b < word.length(); b++) {
-            String character = word.substring((word.length() - 1) - b, word.length() - b);
-            System.out.print(character);
+            newWord += word.substring((word.length() - 1) - b, word.length() - b);
+            
         }
         
-        return "";
+        return newWord;
     }
 
 
@@ -38,9 +40,12 @@ public class StringAlgorithms {
      */
     public static String capitalizeString(String sentence) {
         // TODO: Implement this method
-                    
-                   
-        return "";
+        String newSentence = "";
+        
+        for (int i = 0; i < sentence.length(); i++) {
+        
+        }                  
+        return newSentence;
     }
 
 
@@ -50,14 +55,11 @@ public class StringAlgorithms {
      * if the word is a palindrome (ignoring case), false otherwise.
      */
     public static boolean detectPalindrome(String word) {
-        // TODO: Implement this method
-        if (word.equals(word.reverseWord(word))) {
-            return true;
-        }
+        // TODO: Implement this method 
+        if (word.toLowerCase().equals(reverseWord(word).toLowerCase())) 
+            return true; 
+           
         
-        else {
-         return false;
-         }
          
         return false;
     }
@@ -91,7 +93,7 @@ public class StringAlgorithms {
         System.out.println("\nTesting reverseWord:");
         // Example:
         // System.out.println(reverseWord("hello"));
-        System.out.print(reverseWord("haaaaaa"));
+        System.out.println(reverseWord("How are you?"));
 
         System.out.println("\nTesting capitalizeString:");
         // Example:
@@ -100,6 +102,7 @@ public class StringAlgorithms {
         System.out.println("\nTesting detectPalindrome:");
         // Example:
         // System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("Racecar"));
 
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
